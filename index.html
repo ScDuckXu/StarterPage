@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="2cfa7805-97c2-47bb-8561-3560dcbe96c4"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DuckXu.Com-起始页</title>
+<style>
+:root {
+    --button-width: 16vw;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://kycloud3.koyoo.cn/20240804283f0202408042322156399.png') center center fixed;
+    background-size: cover;
+}
+
+body {
+    position: relative;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    color:white;
+}
+
+.footer {
+    background-color: #00264d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    width: 20vw;
+    height: calc(20vw * 9 / 16);
+    margin: 4px;
+    position: relative;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    background: none;
+}
+
+.button-text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .bg {
+        position: relative;
+        background-attachment: scroll;
+    }
+
+    .content, .footer, .menu {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .button, .search-container input[type="text"], .search-container input[type="submit"] {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .button {
+        width: 80vw;
+        height: calc(80vw * 9 / 16);
+        margin: 4px 0;
+    }
+
+    .user-info {
+        font-size: smaller;
+        max-width: calc(2 * var(--button-width) + 8px);
+    }
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    margin-right: 5px;
+    width: 300px;
+}
+
+form input[type="submit"] {
+    padding: 10px;
+}
+
+.search-container input[type="text"] {
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+    color: #FFFFFF;
+}
+
+.search-container input[type="submit"] {
+    border: none;
+    background-color: #008ed0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button, .button .image-container {
+    border-radius: 20px;
+}
+
+.search-container input[type="text"]::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.button1 .image-container {
+    background-image: url('https://kycloud3.koyoo.cn/20240803bbe1e202408032337207460.png');
+}
+
+.button2 .image-container {
+    background-image: url('https://kycloud3.koyoo.cn/2024070397bbc2024070318280380.png');
+}
+
+.button3 .image-container {
+    background-image: url('https://kycloud3.koyoo.cn/202408052d31d202408051937195172.png');
+}
+
+.button4 .image-container {
+    background-image: url('https://kycloud3.koyoo.cn/202408048356b20240804233907679.png');
+}
+
+.button5 .image-container {
+    background-image: url('https://kycloud3.koyoo.cn/20240806ff41b20240806154704708.jpg');
+}
+
+.button6 .image-container {
+    background-image: url('https://kycloud3.koyoo.cn/20240803ced11202408030115185835.png');
+}
+
+.button7 .image-container {
+    background-image: url('https://kycloud3.koyoo.cn/20240803ced11202408030115185835.png');
+}
+
+.button8 .image-container {
+    background-image: url('https://s21.ax1x.com/2024/04/14/pFjxXQ0.jpg');
+}
+
+.button .image-container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#engineSelector {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+#engineSelector::-ms-expand {
+    display: none;
+}
+
+#engineSelector:hover,
+#engineSelector:focus {
+    border-color: #888;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.user-info p, .user-info span {
+    display: inline;
+    margin-right: 10px;
+}
+
+.user-info {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    display: block;
+    max-width: calc(4 * var(--button-width) + 3 * 8px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: normal;
+    overflow: hidden;
+}
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+}
+</style>
+</head>
+<body>
+
+<div class="bg">
+    <div class="content">
+        <h1>DuckXu's Start Page</h1>
+
+        <div class="search-container">
+            <form action="https://www.baidu.com/s" method="get" target="_blank" id="searchForm">
+                <select id="engineSelector" onchange="updateAction()">
+                    <option value="https://www.baidu.com/s" data-param="wd" selected>Baidu</option>
+                    <option value="https://www.google.com/search" data-param="q">Google</option>
+                    <option value="https://www.bing.com/search" data-param="q">Bing</option>
+                    <option value="https://yandex.com/search" data-param="text">Yandex</option>
+                    <option value="https://www.sogou.com/web" data-param="query">Sogou</option>
+                    <option value="https://www.so.com/s" data-param="q">360</option>
+                </select>
+                <input type="text" name="wd" required placeholder="Search on Web" class="search-box">
+                <input type="submit" value="Search" class="search-button">
+            </form>
+        </div>
+
+        <div class="user-info">
+            <p>你好，来自<span id="location">LocationGetFailed</span></p><p>IP是</p><span id="ip">IPGetFailed</span><p>的朋友!</p>
+            <p><span id="weather">WeatherGetFailed</span></p>
+        </div>
+
+        <div class="button-container">
+            <a href="https://i.duckxu.com" class="button button1">
+                <div class="image-container" loading="lazy"></div>
+            </a>
+            <a href="https://free.duckxu.com" class="button button2">
+                <div class="image-container" loading="lazy"></div>
+            </a>
+            <a href="https://github.com/scduckxu" class="button button3">
+                <div class="image-container" loading="lazy"></div>
+            </a>
+            <a href="https://i.duckxu.com/index.php/links.html" class="button button4">
+                <div class="image-container" loading="lazy"></div>
+            </a>
+        </div>
+
+        <div class="button-container">
+            <a href="https://bc.duckxu.com" class="button button5">
+                <div class="image-container" loading="lazy"></div>
+            </a>
+            
+            <a href="https://duckxu.com" class="button button8">
+                <div class="image-container" loading="lazy"></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Copyright &copy; 2021-2024 DuckXu.Com | <a href="https://icp.gov.moe/?keyword=20230316"> 萌ICP备20230316号 </a></p>
+</div>
+
+<script>
+function updateAction() {
+    var engineSelector = document.getElementById("engineSelector");
+    var searchForm = document.getElementById("searchForm");
+    var selectedEngine = engineSelector.options[engineSelector.selectedIndex];
+    searchForm.action = selectedEngine.value;
+    searchForm.querySelector('input[name="wd"]').name = selectedEngine.getAttribute("data-param");
+}
+
+function getIPAndLocation() {
+    fetch("https://ipapi.co/json/")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("location").textContent = data.city + ", " + data.region + ", " + data.country;
+            document.getElementById("ip").textContent = data.ip;
+        })
+        .catch(() => {
+            document.getElementById("location").textContent = "LocationGetFailed";
+            document.getElementById("ip").textContent = "IPGetFailed";
+        });
+}
+
+function getWeather() {
+    fetch("https://api.open-meteo.com/v1/forecast?latitude=35.6895&longitude=139.6917&current_weather=true")
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("weather").textContent = "当前天气: " + data.current_weather.temperature + "°C, " + data.current_weather.weathercode;
+        })
+        .catch(() => {
+            document.getElementById("weather").textContent = "WeatherGetFailed";
+        });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    getIPAndLocation();
+    getWeather();
+});
+</script>
+
+</body>
+</html>
